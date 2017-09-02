@@ -10707,9 +10707,36 @@ p {
 
   <!-- Javascript -->
   <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> -->
   <!-- custom js -->
-  <script type="text/javascript" src="assets/js/main.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
+  <script>
+  jQuery(document).ready(function($) {
+
+
+      /*======= Skillset *=======*/
+
+
+      $('.level-bar-inner').css('width', '0');
+
+      $(window).on('load', function() {
+
+          $('.level-bar-inner').each(function() {
+
+              var itemWidth = $(this).data('level');
+
+              $(this).animate({
+                  width: itemWidth
+              }, 800);
+
+          });
+
+      });
+
+
+
+  });
+  </script>
 </body>
 
 </html>
