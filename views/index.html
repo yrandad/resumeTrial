@@ -23,7 +23,31 @@
   <!-- Global CSS -->
   <!-- <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css"> -->
   <script>
-    document.getElementsByClassName("name").innerHTML='Threka'
+    function data(){
+      var profilepic='https://s.gravatar.com/avatar/7ea4312ff78f663e8aa18290b25cade1.jpg?s=150';
+      var name='Keerthi';
+      var tagline='Full Stack Developer';
+      var email='alan.doe@website.com';
+      var phone='0123 456 789';
+      var website='portfoliosite.com';
+      var linkedin='linkedin.com/in/alandoe';
+      var github='github.com/username';
+      var twitter='@twittername';
+      var phone='0123 456 789';
+      document.getElementById("profilepic").src=profilepic;
+      document.getElementById("name").innerHTML=name;
+      document.getElementById("tagline").innerHTML=tagline;
+      document.getElementById("email").innerHTML=email;
+      document.getElementById("phone").innerHTML=phone;
+      document.getElementById("website").innerHTML=website;
+      document.getElementById("website").href=website;
+      document.getElementById("linkedin").innerHTML=linkedin;
+      document.getElementById("linkedin").href=linkedin;
+      document.getElementById("github").innerHTML=github;
+      document.getElementById("github").href=github;
+      document.getElementById("twitter").innerHTML=twitter;
+      document.getElementById("twitter").href=twitter;
+    }
   </script>
   <style>
     /*!
@@ -10231,13 +10255,13 @@ p {
   text-align: center;
   color: #fff;
 }
-.sidebar-wrapper .name {
+.sidebar-wrapper #name {
   font-size: 32px;
   font-weight: 900;
   margin-top: 0;
   margin-bottom: 10px;
 }
-.sidebar-wrapper .tagline {
+.sidebar-wrapper #tagline {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   font-weight: 400;
@@ -10466,25 +10490,25 @@ p {
     <![endif]-->
 </head>
 
-<body>
+<body onload="data()">
   <div class="wrapper">
     <div class="sidebar-wrapper">
       <div class="profile-container">
 <!--         <img class="profile" src="http://i.dailymail.co.uk/i/pix/2015/08/11/11/2B443A8600000578-3193453-A_younger_Ned_It_s_been_widely_touted_that_13_year_old_Sebastian-a-48_1439288388358.jpg" alt="" /> -->
-          <img class="profile" src="https://s.gravatar.com/avatar/7ea4312ff78f663e8aa18290b25cade1.jpg?s=150" alt="" />
-        <h1 class="name"></h1>
-        <h3 class="tagline">Full Stack Developer</h3>
+          <img id="profilepic" src="" alt="" />
+        <h1 id="name"></h1>
+        <h3 id="tagline"></h3>
       </div>
       <!--//profile-container-->
 
       <div class="contact-container container-block">
         <ul class="list-unstyled contact-list">
-          <li class="email"><i class="fa fa-envelope"></i><a href="mailto: yourname@email.com">alan.doe@website.com</a></li>
-          <li class="phone"><i class="fa fa-phone"></i><a href="tel:0123 456 789">0123 456 789</a></li>
-          <li class="website"><i class="fa fa-globe"></i><a href="http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/" target="_blank">portfoliosite.com</a></li>
-          <li class="linkedin"><i class="fa fa-linkedin"></i><a href="#" target="_blank">linkedin.com/in/alandoe</a></li>
-          <li class="github"><i class="fa fa-github"></i><a href="#" target="_blank">github.com/username</a></li>
-          <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/3rdwave_themes" target="_blank">@twittername</a></li>
+          <li class="email"><i class="fa fa-envelope"></i><a id="email" href="mailto: yourname@email.com"></a></li>
+          <li class="phone"><i class="fa fa-phone"></i><a href="tel:0123 456 789" id="phone"></a></li>
+          <li class="website"><i class="fa fa-globe"></i><a id="website" href="" target="_blank"></a></li>
+          <li class="linkedin"><i class="fa fa-linkedin"></i><a id="linkedin" href="" target="_blank"></a></li>
+          <li class="github"><i class="fa fa-github"></i><a id="github" href="" target="_blank"></a></li>
+          <li class="twitter"><i class="fa fa-twitter"></i><a id="twitter" href="" target="_blank"></a></li>
         </ul>
       </div>
       <!--//contact-container-->
